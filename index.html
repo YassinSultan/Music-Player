@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Music Player</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="player-container">
+        <button id="open-list" type="button" class="btn list-btn">
+          <i class="fa-solid fa-list"></i>
+        </button>
+        <div id="play-list" class="play-list">
+          <div class="list-actions">
+            <button
+              id="add-to-list"
+              type="button"
+              class="btn list-btn add-list-btn"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <button id="close-list" type="button" class="btn list-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <ul id="list" class="list"></ul>
+        </div>
+        <div class="add-container" id="add-container">
+          <label for="add-input">
+            <img src="images/file-mp3.png" alt="" width="200px"
+          /></label>
+          <input
+            type="file"
+            name="add-input"
+            id="add-input"
+            accept="audio/mp3, audio/mpeg"
+          />
+          <input
+            placeholder="Enter Artist Name"
+            class="artist-input"
+            id="artist-input"
+            type="text"
+            disabled
+          />
+          <div class="add-actions">
+            <button id="cancel" type="button" class="btn">cancel</button>
+            <button id="save" type="button" class="btn">save</button>
+          </div>
+        </div>
+        <audio src="" id="audio" controls></audio>
+        <img id="disc" class="disc-img" src="images/disc.png" alt="disc" />
+        <div class="audio-info">
+          <h2 id="audio-name" class="audio-name">Nas Helwa</h2>
+          <p id="artist-name" class="singer-name">Amr Diab</p>
+        </div>
+        <div class="audio-actions">
+          <input id="time-line" type="range" value="0" min="0" />
+          <button id="previous-audio-btn" type="button" class="btn">
+            <i class="fa-solid fa-backward-step"></i>
+          </button>
+          <button id="backward-10-btn" type="button" class="btn">
+            <i class="fa-solid fa-backward"></i>
+          </button>
+          <button id="pause-btn" type="button" class="btn main-btn">
+            <i class="fa-solid fa-circle-pause"></i>
+          </button>
+          <button id="play-btn" type="button" class="btn main-btn">
+            <i class="fa-solid fa-circle-play"></i>
+          </button>
+          <button id="forward-10-btn" type="button" class="btn">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+          <button id="next-audio" type="button" class="btn">
+            <i class="fa-solid fa-forward-step"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
